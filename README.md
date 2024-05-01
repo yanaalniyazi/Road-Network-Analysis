@@ -1,3 +1,3 @@
-# DS210 Project
-Analysis of Pennsylvania Road Network
+# DS210 Project - Analysis of Pennsylvania Road Network
+
 
