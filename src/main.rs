@@ -32,3 +32,15 @@ fn top_nodes_centrality(centrality_type: &str, centrality: &HashMap<NodeIndex, f
 }
 
 
+fn top_nodes_degrees(centrality_type: &str, centrality: &HashMap<NodeIndex, f64>, top_count: usize) {
+    println!("Top 10 Nodes by {}: ", centrality_type);
+
+    let mut sorted_nodes: Vec<_> = centrality.iter().collect();
+    sorted_nodes.sort_by(|(_, &a), (_, &b)| b.partial_cmp(&a).unwrap());
+
+    for (i, (&node, &value)) in sorted_nodes.iter().take(top_count).enumerate() {
+        println!("{}. Node {}: {:.2}", i + 1, node.index(), value);
+    }
+
+    println!();
+}

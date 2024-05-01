@@ -87,7 +87,7 @@ pub fn calculate_average_distance(graph: &Graph<i32, ()>, size: usize) -> f64 {
     for &start_node in &subset {
         let distances = bfs_distances(graph, start_node);
 
-        for (end_node, distance) in distances {
+        for (_end_node, distance) in distances {
             total_distance += distance;
             total_pairs += 1;
         }
