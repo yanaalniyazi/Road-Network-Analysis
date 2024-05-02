@@ -10,7 +10,7 @@ fn main() {
     let degree_centrality = graph::calculate_degree_centrality(&undirected_graph);
     
     top_nodes_centrality("Degree Centrality", &degree_centrality, 10);
-    top_nodes_degrees("Degree Centrality", &degrees, 10);
+    top_nodes_degrees("Degree", &degrees, 10);
 
     let avg_distance = graph::calculate_average_distance(&undirected_graph, 1000);
     println!("Average Distance: {:.2}", avg_distance);
