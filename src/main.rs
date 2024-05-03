@@ -14,9 +14,8 @@ fn main() {
 
     let avg_distance = graph::calculate_average_distance(&undirected_graph, 1000);
     println!("Average Distance: {:.2}", avg_distance);
-
-}
-
+    
+    }
 
 fn top_nodes_centrality(centrality_type: &str, centrality: &HashMap<NodeIndex, f64>, top_count: usize) {
     println!("Top 10 Nodes by {}: ", centrality_type);

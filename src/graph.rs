@@ -6,7 +6,6 @@ use std::path::Path;
 use std::collections::VecDeque;
 use rand::seq::SliceRandom;
 
-
 pub fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
 where
     P: AsRef<Path>,
@@ -135,7 +134,6 @@ mod tests {
     fn test_calculate_degree_centrality() {
         let graph = read_graph_from_file("roadNet-PA.txt");
         let degree_centrality = calculate_degree_centrality(&graph);
-
 
         println!("{:?}", degree_centrality);
     }
